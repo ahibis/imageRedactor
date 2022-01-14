@@ -1,0 +1,417 @@
+
+.navBar{
+    background-image: url("/public/img/lk/ШАПКА .png");
+    background-size: cover;
+    height: 3.2vw;
+    color:white;
+}
+body{
+    background-image: url("/public/img/lk/fone.png");
+    background-size: cover;
+    background-attachment:fixed;
+    font-family: Calibri;
+    min-height: 100%;
+    color:#1C4747;
+    font-size: 1.6vw;
+}
+.lilText{
+    font-size: 1vw;
+}
+#club{
+    font-size: 0.795vw;
+    margin-left: 1.5vw;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+#accaunt{
+    font-size: 0.795vw;
+}
+#logo{
+    width:2.9vw;
+}
+#butExit{
+    width: 4.42vw;
+    margin-left:1.3vw;
+}
+#butGear{
+    width: 1.3vw;
+    margin-left: 3.77vw;
+    width: 2.73vw;
+}
+.aboutDsp{
+    margin: 1.3vw 1vw 0vw 2.4vw  ;
+}
+.photoPart{
+    width: 11vw;
+}
+.photoPart{
+    width: 11vw;
+}
+.br1{
+    display: block;
+    height: 0.3vw;
+}
+.mainDsp{
+    width: 61.6vw;
+}
+.mainDsp>img{
+    width: 61.6vw;
+    position: absolute;
+    z-index: -1;
+    height:40vw;
+}
+.info{
+    width: 50.5vw;
+    padding-top: 0.5vw;
+}
+.table{
+    display: grid;
+    grid-template-columns:12vw auto;
+    font-size: 1.2vw;
+}
+.table input{
+    font-size: 1vw;
+    height: 1.4vw;
+    padding: 0vw;
+    width: 50%;
+    border:solid 1px gray;
+}
+.table select{
+    font-size: 1vw;
+    height: 1.4vw;
+    padding: 0vw;
+    width: 50%;
+    border:solid 1px gray;
+}
+.w100p{
+    width: 100%!important;
+}
+.full{
+    width: 100%!important;
+}
+.menu{
+    width:21vw;
+}
+.menu img{
+    width: 21vw;
+    margin-top:0.5vw;
+    cursor: pointer;
+}
+#firsButton{
+    margin-top:0px!important;
+}
+.addGame{
+    width: 61.5vw;
+}
+.addGame>img{
+    width: 61.6vw;
+    height:30vw;
+    position: absolute;
+    z-index: -1;
+}
+.addGameInfo{
+    margin: 1vw 5vw 0vw 1vw;
+}
+.table1{
+    display: grid;
+    grid-template-columns:21vw auto;
+    font-size: 1.3vw;
+}
+.table1 input{
+    font-size: 1vw;
+    height: 1.3vw;
+    padding: 0vw;
+    width: 50%;
+    border:solid 1px gray;
+}
+.table1 select{
+    font-size: 1vw;
+    height: 1.3vw;
+    padding: 0vw;
+    width: 50%;
+    border:solid 1px gray;
+}
+.right{
+    display:flex;
+    justify-content:flex-end;
+
+}
+.smallInp{
+    width:3vw!important;
+}
+.w8{
+    width: 8vw;
+}
+.btnAddGame{
+    width: 12.6vw;
+}
+.calendars{
+    width: 61.5vw;
+    margin-top: 5vw;
+}
+.calendars>img{
+    width: 61.6vw;
+    position: absolute;
+    z-index: -1;
+    padding-top: 1vw;
+}
+.around{
+    display: flex;
+    justify-content: space-around;
+}
+.showList{
+    width:70vw;
+}
+.showListDsp{
+    width:61.3vw;
+}
+
+.addBtn{
+    width: 12.7vw;
+}
+.addBtnText{
+    position: absolute;
+    width: 12.7vw;
+    font-family: Calibri;
+    font-size:0.98vw;
+    text-align: center;
+    color: white;
+    margin-top:0.5vw;
+}
+.table3{
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-size: 0.98vw;
+    text-align: center;
+}
+
+.tableOsn{
+    background-image: url("/public/img/lk/table.png");
+    background-size: cover;
+}
+.tableHat{
+    background-image: url("/public/img/lk/tableHat.png");
+    background-size: cover;
+}
+.btnImg{
+    width: 20.8vw;
+}
+.btnText, .btnTextActive,.btnLittleText{
+    position: absolute;
+    width: 20.8vw;
+    height: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7vw;
+    font-family: Calibri;
+    color: black;
+    cursor: pointer;
+}
+.btnTextActive{
+    color: white;
+}
+.btnLittle{
+    width: 16.5vw!important;
+}
+.btnLittleText{
+    width: 16.5vw;
+    height: 2.6vw;
+    font-size: 1.1vw;
+}
+.active{
+    color:white;
+}
+.calendar{
+    width:16.7vw;
+    font-size: 1.5vw;
+    color:black;
+    font-family: Roboto;
+    background-color: white;
+}
+.calendar .name{
+    background-color: #F3CED6;
+    text-align: center;
+}
+.calendar .main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.calendar .n{
+    color:#444344;
+}
+.calendar .h{
+    color: #ea2e32;
+}
+.ref{
+    border:1px solid black;
+    background-color:white;
+    width: 30vw;
+    display:inline-flex
+}
+#addLic{
+    width: 61.6vw;
+    position: absolute;
+    z-index: -1;
+    height: 40vw;
+}
+@media screen and (max-width: 1080px) {
+    #addLic{
+        width: 92vw;
+        height: 165vw;
+    }
+    .showList{
+        width: 100vw;
+    }
+    .showListDsp{
+        width: 90vw;
+    }
+    .addBtnText{
+        width: 38vw;
+        font-size: 3vw;
+    }
+    .addBtn{
+        width: 38vw;
+    }
+    .table3{
+        font-size: 3vw;
+    }
+    .tableHat{
+        font-size: 1.5vw;
+    }
+    #accaunt {
+        font-size: 3.6vw;
+    }
+    #butExit{
+        width: 10vw;
+    }
+    #butGear{
+        width: 8vw;
+    }
+    .navBar{
+        height: 8vw;
+    }
+    #club{
+        width:8vw;
+        font-size:2.4vw;
+    }
+    #logo{
+        width: 8vw;
+    }
+    .addGame{
+        width: 95vw;
+    }
+    .addGame>img {
+        width: 92vw;
+        height: 122vw;
+    }
+    .table1{
+        font-size: 3.6vw;
+        grid-template-columns: 36vw auto;
+    }
+    .table1 select{
+        font-size: 4.5vw;
+        height: 6vw;
+        width: 100%;
+    }
+    .table1 input{
+        font-size: 4.5vw;
+        height: 6vw;
+        width: 100%;
+    }
+    .smallInp{
+        width: 12vw!important;
+    }
+    .addGameInfo{
+        font-size: 4vw;
+    }
+    .calendars {
+        width: 90vw;
+        margin-top: 15vw;
+    }
+    .calendar {
+        width: 25vw;
+        font-size: 2.25vw;
+    }
+    .calendars>img{
+        width: 90vw;
+        height:30vw;
+    }
+    .aboutDsp{
+        flex-direction: column;
+    }
+    .photoPart{
+        width: 100vw;
+        font-size: 10vw;
+    }
+    .br1{
+        height:1.2vw;
+    }
+    .info{
+        width:90vw;
+        font-size: 6vw;
+    }
+    .mainDsp{
+        width:90vw;
+        margin-left:1vw;
+    }
+    .mainDsp>img{
+        width: 92vw;
+        height: 165vw;
+    }
+    .table{
+        font-size: 4.8vw;
+        grid-template-columns: 36vw auto;
+    }
+    .table select{
+        font-size: 4.5vw;
+        height: 6vw;
+        width: 100%;
+    }
+    .table input{
+        font-size: 4.5vw;
+        height: 6vw;
+        width: 100%;
+    }
+    .btnLittleText{
+        width: 49.5vw;
+        height: 7.8vw;
+        font-size: 3.3vw;
+    }
+    .btnLittle{
+        /*width: 49.5vw!important;*/
+    }
+    .menu{
+        position: fixed;
+        background-color: white;
+        width: 62vw;
+        margin-left: 35vw;
+        padding: 1vw;
+        border-radius:1vw;
+        border:0.5vw solid black;
+    }
+    .btnText, .btnTextActive{
+        width: 60vw;
+        font-size: 8vw;
+        height: 8vw;
+    }
+    .menu .btnImg{
+        width: 60vw;
+    }
+    .menu .btnLittleText{
+        width: 45vw;
+    }
+    .menu .btnLittle{
+        width: 45vw!important;
+    }
+    .btnLittle{
+        width:45vw!important;
+    }
+    .ref{
+        width: 60vw;
+    }
+}

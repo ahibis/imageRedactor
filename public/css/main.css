@@ -1,0 +1,95 @@
+.wrap {
+    background-color: white;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    padding: 10px;
+}
+body{
+    background-color:#f8f9fa;
+}
+img{
+    cursor: pointer;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centerColumn{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.between{
+    display: flex;
+    justify-content: space-between;
+}
+.round{
+    display: flex;
+    justify-content: space-around;
+}
+.right{
+    display: flex;
+    justify-content: flex-end ;
+}
+.left{
+    display: flex;
+}
+.rightColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end ;
+}
+#messInput{
+    min-height:36px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: border-bottom-color 0.3s;
+}
+.currentUser{
+    background-color:#28a745a0;
+    padding: 5px;
+    border-radius:10px;
+}
+.green{
+    background-color:#28a745a0;
+}
+.Card{
+    padding: 10px;
+    border-radius:10px;
+}
+#users{
+    max-height: 60vh;
+    Overflow:auto;
+}
+hr{
+    margin:10px 0px;
+}
+.mainDesplay{
+    margin:0px 5px;
+}
+.currentStage{
+    background-color:#28a745a0;
+}
+.cardsWrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+.cardWrap{
+    border-radius:2px;
+    border: 5px solid #ced4da;
+}
+.chooseCard{
+    border: 5px solid #28a745;
+}
+.blinkCard{
+    border: 5px solid #ffc107;
+}
+#error{
+    color: red;
+}

@@ -1,0 +1,440 @@
+#butExit{
+    width: 4.42vw;
+    margin-left:1.3vw;
+}
+#butGear{
+    width: 1.3vw;
+    margin-left: 3.77vw;
+    width: 2.73vw;
+}
+@keyframes blink {
+    from {filter:brightness(1);}
+    50% {filter:brightness(1.3);}
+    to {filter:brightness(1);}
+}
+.blink{
+    animation: blink .5s ease-in-out infinite;
+}
+@keyframes blink2 {
+    from {filter:brightness(1);}
+    50% {filter:brightness(2);}
+    to {filter:brightness(1);}
+}
+.blink2{
+    animation: blink .5s ease-in-out infinite;
+}
+.butChoose{
+    width: 16.64vw;
+    margin-left:1.5vw;
+    cursor: pointer;
+}
+.butChooseText{
+    position: absolute;
+    width: 16.64vw;
+    text-align: center;
+    margin-left:1.5vw;
+    cursor: pointer;
+    padding-top:0.5vw;
+    color: black;
+    font-size:1.45vw;
+}
+.stageImg{
+    height:4vw;
+    cursor: pointer;
+}
+.col-1{
+    width: 0.9%;
+}
+.disLeft{
+    width: 16.64vw;
+    margin-left:0.5vw;
+}
+.players{
+    min-height: 20.8vw;
+    font-size:1.2vw;
+    color:black;
+    margin-top: 3.75vw;
+}
+.chat{
+    font-size:1vw;
+    color: black;
+    margin-top: 0.52vw;
+}
+.display{
+    width: 65vw;
+}
+.disBut{
+    width: 5.2vw;
+    cursor: pointer;
+    height: 100%;
+}
+.round{
+    width: 16vw;
+    cursor: pointer;
+    height: 100%;
+}
+.disRight{
+    width:16.64vw;
+    padding-right:2.47vw;
+}
+.decCard{
+    width: 5.2vw;
+    margin-top:0.5vw;
+    cursor: pointer;
+}
+.settings{
+    margin-top: 0.5vw;
+    margin-left: 0.9vw;
+}
+.setBut{
+    margin-top: 1.15vw;
+    cursor: pointer;
+}
+body{
+    width: 100vw
+}
+.cardDis{
+    width: 6vw;
+}
+.disText{
+    width: 60vw;
+    min-height: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 10vw;
+    font-size: 1.5vw;
+}
+.disp{
+    background-color: white;
+    min-height: 30vw;
+}
+.batalText{
+    font-size: 2.16vw;
+    text-align: center;
+    color:black;
+    margin-top: 2.6vw;
+}
+#timerWrap{
+    width: 21.58vw;
+    margin-top:1.3vw;
+    margin-left: calc(50% - 10.79vw);
+}
+#timer{
+    margin-left: calc(50% - 10.79vw);
+    width: 21.58vw;
+    font-size: 2.8vw;
+    text-align: center;
+    margin-top:4vw;
+}
+#battleCard{
+    width: 33vw;
+    height:15vw;
+    background-color: white;
+    margin-left: calc(50% - 16.5vw);
+    margin-top:3.12vw;
+    text-align: center;
+    font-size: 2.5vw;
+    color:black;
+    padding: 0vw 0px;
+    font-family: Calibri;
+}
+#battleCard div{
+    max-width:33vw;
+}
+#battleCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.batlDec{
+    position: absolute;
+    height: 0px;
+}
+.worseCard{
+    width: 5.2vw;
+    position: absolute;
+}
+.worseCard:nth-child(1){
+    margin-left: 0vw;
+}
+.btBreak{
+    filter: contrast(.1);
+}
+.butPress{
+    filter:brightness(1.3);
+}
+.feedback{
+    font-family: Calibri;
+    font-size: 1vw;
+    color: black;
+}
+.feedText{
+    font-size: 2vw;
+}
+.feedback1{
+    text-align: center;
+    font-size: 2.158vw;
+    color:black;
+}
+.feedback2{
+    text-align: center;
+    font-size: 1.083vw;
+}
+.radios{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.radios div{
+    padding: 0px 0.47vw;
+}
+.radios input{
+    transform:scale(1.5);
+}
+.reviews{
+    font-family: Calibri;
+    font-size: 1.083vw;
+    color: black;
+    padding: 0vw 7.8vw;
+}
+.reviews textarea{
+    border:0.2vw solid #878b93;
+    width: 100%;
+}
+.cell{
+    border:1px solid black;
+    color:black;
+}
+.row{
+    margin-left: 0px;
+    max-width: 100%;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.between{
+    display: flex;
+    justify-content: space-between;
+}
+.btnSend{
+    width:15vw
+}
+.btnSendText{
+    position: absolute;
+    width: 15vw;
+    text-align: center;
+    padding-top:0.7vw;
+    cursor: pointer;
+}
+.hide{
+    display: none!important;
+}
+.userStat{
+    position: absolute;
+    vidth:20vw;
+    /*margin-left: 16vw;
+    margin-top: -2vw;*/
+    background-color: white;
+    border: solid 1px black;
+    z-index: 10;
+}
+#btnStages{
+    width: 16.64vw;
+    margin-left: 1.5vw;
+}
+#btnStagesTxt{
+    width: 16.64vw;
+    margin-left: 1.5vw;
+    color: black;
+    margin-top:0.5vw;
+    font-size:1.46vw;
+    position: absolute;
+    text-align: center;
+}
+#messages{
+    max-height:300px;
+    overflow-y:auto;
+}
+@media screen and (orientation:portrait) {
+    #accaunt {
+        font-size: 3.6vw;
+    }
+    #butExit{
+        width: 10vw;
+    }
+    #butGear{
+        width: 8vw;
+    }
+    .navBar{
+        height: 8vw;
+    }
+    #club{
+        width:8vw;
+        font-size:2.4vw;
+    }
+    #logo{
+        width: 8vw;
+    }
+    .chooses{
+        display: none;
+    }
+    .lines{
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+        flex-wrap: wrap;
+    }
+    .lines>.flex{
+        display: none;
+    }
+    .mainDesplay{
+        flex-direction: column;
+        margin: 0px;
+    }
+    #btnStagesTxt{
+        width:100vw!important;
+        font-size:9vw!important;
+    }
+    #btnStages{
+        width: 100vw !important;
+    }
+    .butChoose{
+        width: 45vw!important;
+    }
+    .display{
+        width: 100vw;
+    }
+    .display .flex{
+        flex-wrap: wrap;
+    }
+    .disBut{
+        width:33vw;
+        display: none;
+    }
+    .blink{
+        display: block!important;
+    }
+    .round{
+        width: 100vw;
+        order:1;
+    }
+    #timer{
+        width: 80vw;
+        font-size: 12vw;
+        margin-left: calc(50% - 40vw)
+    }
+    .cardDis{
+        width: 19vw;
+    }
+    .disText{
+        width: 80vw;
+        min-height: 6vw;
+        padding-right: 10vw;
+        font-size: 5vw;
+    }
+    .disp{
+        min-height:45vw;
+    }
+    .disRight>img{
+        display: none;
+    }
+    .disRight>.flex {
+       flex-direction: column;
+    }
+    .disRight>.flex>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    .decCard{
+        width: 45vw;
+        display: none;
+    }
+    .disRight{
+        width: 100vw;
+    }
+    .disRight>.flex>div{
+        flex-wrap: wrap;
+    }
+    .disLeft{
+        order: 1;
+        width: 100vw;
+        margin-left: 0vw;
+        display: flex;
+        font-size: 2.4vw;
+    }
+    .disLeft img{
+        display: none;
+    }
+    .players{
+        width:30vw;
+        margin-top: 0vw;
+    }
+    .chat{
+        width: 70vw;
+        margin-top: 0vw;
+    }
+    .players{
+        font-size: 3vw;
+
+    }
+    .chat{
+        font-size:2vw;
+    }
+    .btn{
+        font-size:2.5vw!important;
+    }
+    #messInput{
+        background-color: white;
+        border-radius:1vw;
+    }
+    .feedback{
+        font-size: 2vw;
+    }
+    .feedback1{
+        font-size: 4.5vw;
+    }
+    .feedback2{
+        font-size: 2vw;
+    }
+    .feedText{
+        font-size: 4vw;
+    }
+    .radios input {
+        transform: scale(3);
+        margin:0vw 1.5vw;
+    }
+    .btnSendText{
+        width: 30vw;
+        font-size: 3vw;
+    }
+    .btnSend{
+        width: 30vw;
+    }
+    .stat{
+        font-size:2.5vw;
+    }
+    .reviews{
+        font-size:2vw!important;
+    }
+    #battleCard{
+        width: 70vw;
+        height: 40vw;
+        margin-left: calc(50% - 35vw);
+        margin-top: 4.68vw;
+        font-size: 6vw!important;
+    }
+    .worseCard{
+        width: 7.8vw;
+    }
+
+    .settings{
+        position: fixed;
+        background-color: white;
+        width: 55vw;
+        top:10vw;
+        left: 45vw;
+    }
+}

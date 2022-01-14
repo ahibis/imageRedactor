@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <script>if ([1,2,3].includes==undefined) {document.location="/browserIsout";}</script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>game</title>
+
+    <link rel="stylesheet" href="public/fonts/stylesheet.css">
+    <link rel="stylesheet" href="public/css/dir/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/dir/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="public/css/dir/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="public/css/main.css?v=<%=v%>">
+    <link rel="stylesheet" href="public/css/gameList.css?v=<%=v%>">
+    <script src="public/js/dir/jquery-3.4.1.min.js"></script>
+    <script src="public/js/dir/jquery.cookie.js"></script>
+    <script src="public/js/dir/vue.js"></script>
+    <script src="public/js/dir/bootstrap.min.js"></script>
+    <script src="public/js/dir/bootstrap.bundle.min.js"></script>
+    <script src="public/js/main.js?v=<%=v%>"></script>
+
+</head>
+<body>
+</html>
+<div id="app">
+    <div class="left">
+        <div>
+            <canvas id="certificate" style="width: 70vw"></canvas>
+        </div>
+
+        <div>
+            <div class="btn btn-success" onclick="certificate.addText()">добавить текст</div>
+            <div class="btn btn-success" onclick="certificate.addImg()">добавить картинку</div>
+            <div class="btn btn-success" onclick="certificate.drawCertificate()">обновить</div>
+            <div class="btn btn-success" onclick="certificate.saveTemplate()">скачать шаблон</div>
+            <div id="history"></div>
+        </div>
+    </div>
+
+</div>
+<style>
+    .textEdit{
+        display: grid;
+        grid-template-columns: 50px auto;
+    }
+    .titl{
+        cursor: pointer;
+        font-size:2vw;
+    }
+
+
+</style>
+<script>
+    
+    class TEXT{
+        constructor(text='',x=0,y=0) {
+            this.fillStyle="#263871";
+            this.textBaseline = "top";
+            this.size=50;
+            this.font="AvantGardeCTT";
+            this.x=x;
+            this.y=y;
+            this.text=text;
+            this.type="text";
+        }
+        async draw(ctx){
+            ctx.fillStyle=this.fillStyle;
+            ctx.textBaseline="top";
+            ctx.font=`${this.size}px ${this.font}`;
+            ctx.fillText(this.text,this.x,this.y);
+        }
+        html(){
+            let div=document.createElement("div");
+            div.innerHTML=`
+            <span class="titl">Текст</span><input  prop="text" style="font-size:11px">
+            <div class="textEdit" >
+            цвет<input type="color" prop="fillStyle" >
+            размер<input type="number" prop="size">
+            x<input type="number" prop="x" step="10">
+            y<input type="number" prop="y" step="10">
+            текст<input  prop="text">
+            </div>
+
+            `
+            let me=this;
+            $(div).find("input").each(function () {
+                let prop=$(this).attr("prop");
+                $(this).val(me[prop]);
+                $(this).on("input",function () {
+                    me[prop]=$(this).val();
+                    certificate.drawCertificate()
+                    certificate.data.save();
+                })
+            })
+            let options=$(div).find(".textEdit")
+            $(div).find(".titl").each(function () {
+                options.hide()
+                $(this).click(function () {
+                    if(options.is(":hidden")) options.show(); else options.hide();
+                } )
+
+            });
+            return div;
+        }
+    }
+    class IMAGE{
+        loadImg(src){
+            if(src==this._src) return this._img;
+            let me=this;
+            return new Promise((resolve,reject)=>{
+                let img=new Image();
+                img.src=src;
+                me._src=src;
+                me._img=img;
+                img.onload=data=>resolve(img)
+            })
+        }
+        constructor(src='',x=0,y=0) {
+            this.x=x;
+            this.y=y;
+            this.src=src;
+            this.type="Image";
+            this.name="test"
+            this._img=null;
+            this._src=null;
+        }
+        async draw(ctx){
+            this._img=await this.loadImg(this.src);
+            ctx.drawImage(this._img,this.x,this.y)
+        }
+        html(){
+            let div=document.createElement("div");
+            div.innerHTML=`
+            <span class="titl">Картинка</span>
+            <div class="textEdit" >
+            src<input  prop="src">
+            x<input type="number" prop="x" step="10">
+            y<input type="number" prop="y" step="10">
+            </div>
+            `
+            let me=this;
+            $(div).find("input").each(function () {
+                let prop=$(this).attr("prop");
+                $(this).val(me[prop]);
+                $(this).on("input",function () {
+                    me[prop]=$(this).val();
+                    certificate.drawCertificate()
+                    certificate.data.save();
+                })
+            })
+            let options=$(div).find(".textEdit")
+            $(div).find(".titl").each(function () {
+                options.hide()
+                $(this).click(function () {
+                    if(options.is(":hidden")) options.show(); else options.hide();
+                } )
+            });
+            return div;
+        }
+    }
+    class Certificate{
+        saveTemplate(){
+            let a=document.createElement("a");
+            a.download="template";
+            let blob = new Blob([localStorage["Certificate"]], {type: 'text/plain'});
+            a.href=URL.createObjectURL(blob)
+            a.click();
+        }
+        updateHistory(){
+            if(!this.el) return;
+            this.el.innerHTML=``;
+            for(let o of this.objects) this.el.append(o.html());
+            this.drawCertificate()
+        }
+        addText(){
+            let text=new TEXT("тест",0,0);
+            this.objects.push(text);
+            this.data.save();
+            this.updateHistory()
+        }
+        addImg(){
+            let img=new IMAGE("public/img/ava/anonym.png",0,0);
+            this.objects.push(img);
+            this.data.save();
+            this.updateHistory()
+        }
+        constructor(historyEl=null) {
+            let data=new constObject("Certificate");
+            this.data=data;
+            this.el=historyEl;
+            data.objects=data.objects||[];
+            this.objects=data.objects;
+            data.addCLASS(TEXT);
+            data.addCLASS(IMAGE);
+            this.updateHistory()
+        }
+        loadImg(src){
+            return new Promise((resolve,reject)=>{
+                let img=new Image();
+                img.src=src;
+                img.onload=data=>resolve(img)
+            })
+        }
+        canvasToImg(ctx){
+            let src=ctx.toDataURL();
+            let img=new Image();
+            img.src=src;
+            return img
+        }
+        saveImage(image) {
+            let link = document.createElement("a");
+            link.setAttribute("href", image.src);
+            link.setAttribute("download", "certificate");
+            link.click();
+        }
+        async drawCertificate() {
+            let el=document.getElementById('certificate')
+            el.width=2539;
+            el.height=1768;
+            let ctx = el.getContext("2d")
+            ctx.fillText2=function (text,x,y,offset=10){
+                let texts=text.split("\n");
+                let height=(/([\d.]*)/.exec(this.font))[0]*1;
+                for(let i=0;i<texts.length;i++){
+                    this.fillText(texts[i],x,y+i*(height+offset))
+                }
+            }
+            for(let o of this.objects) await o.draw(ctx);
+            let img=this.canvasToImg(el)
+            this.certificate=img;
+            return img;
+        }
+        downImg(){
+            this.saveImage(this.certificate);
+        }
+        async saveAndDown(){
+            this.saveImage(await certificate.drawCertificate());
+        }
+    }
+    $("#date").val(new Date().toJSON().split('T')[0])
+    let certificate=new Certificate(document.getElementById("history"));
+    certificate.drawCertificate()
+
+</script>

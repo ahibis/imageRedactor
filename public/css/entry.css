@@ -1,0 +1,182 @@
+.navBar{
+    background-image: url("/public/img/entry/шапка.png");
+    background-size: cover;
+    height: 3.2vw;
+    color:white;
+}
+body{
+    background-image: url("/public/img/entry/фон.png");
+    background-size: cover;
+    background-attachment:fixed;
+    font-family: Calibri;
+    min-height: 100%;
+    color:#1C4747;
+    font-size: 1.4vw;
+}
+#club{
+    font-size: 0.795vw;
+    margin-left: 1.5vw;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+#accaunt{
+    font-size: 0.795vw;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.between{
+    display: flex;
+    justify-content: space-between;
+}
+.logoBig{
+    width: 24.57vw;
+    margin-top: 3.38vw;
+    height: 100%;
+}
+.but{
+    width: 17.86vw;
+    display: block;
+}
+.logo2{
+    width: 21vw;
+}
+.buttons{
+    margin-top: 3.64vw;
+}
+.btnText{
+    position: absolute;
+    width: 17.86vw;
+    text-align: center;
+    padding-top:1.3vw;
+    cursor: pointer;
+}
+.disp{
+    margin-top:2.34vw;
+}
+.but2{
+    width:9.1vw
+}
+.btn2Text{
+    position: absolute;
+    width: 9.1vw;
+    text-align: center;
+    padding-top:2.12vw;
+    cursor: pointer;
+}
+.bord{
+    width:39.7vw;
+    height: 40vw;
+    position: absolute;
+    z-index: -1;
+}
+#registration{
+    width:38.3vw;
+    font-size:1.75vw;
+    font-family: Calibri;
+    color:#203238;
+}
+#registration .text{
+    font-weight: bold;
+    margin-top: 2.2vw;
+    padding-left: 2vw;
+    padding-right: 5.8vw;
+}
+.lol{
+    margin-top: 1.2vw;
+    padding-left: 2vw;
+    padding-right: 5.8vw;
+}
+#registration label{
+    margin: 0px;
+    padding: 0px;
+}
+.form-control{
+    margin: 0px;
+    height:2vw;
+}
+#registration .btnText{
+    font-size: 1vw;
+    cursor: pointer;
+}
+#registration .but{
+    display: inline-block;
+    cursor: pointer;
+}
+.disp1{
+    margin-top: 3vw;
+}
+#login{
+    width:38.3vw;
+    font-size:1.75vw;
+    font-family: Calibri;
+    color:#203238;
+}
+#login .text{
+    font-weight: bold;
+    margin-top: 2.2vw;
+    padding-left: 2vw;
+    padding-right: 5.8vw;
+}
+#login label{
+    margin: 0px;
+    padding: 0px;
+}
+#login .btnText{
+    font-size: 1vw;
+    cursor: pointer;
+}
+#login .but{
+    display: inline-block;
+    cursor: pointer;
+}
+.bord1{
+    width:39.7vw;
+    height: 22vw;
+    position: absolute;
+    z-index: -1;
+}
+#error{
+    color: red;
+}
+@media screen and (orientation:portrait) {
+    #registration{
+        width: 90vw;
+        font-size: 8vw;
+    }
+    #login{
+        width: 90vw;
+        font-size: 8vw;
+    }
+    .bord{
+        width: 90vw;
+        height: 165vw;
+    }
+    .bord1{
+        width: 90vw;
+        height: 75vw;
+    }
+    .but{
+        width: 40vw;
+    }
+    .btnText{
+        width: 40vw;
+        margin-top:1vw;
+        font-size: 3vw;
+    }
+    #registration .btnText{
+        font-size: 4.5vw;
+    }
+    #login .btnText{
+        font-size: 4.5vw;
+    }
+    .form-control{
+        height: 10vw;
+        font-size: 4vw;
+    }
+
+}

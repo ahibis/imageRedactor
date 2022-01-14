@@ -1,0 +1,40 @@
+.cardEChoose{
+    width: 8vw;
+    padding: 1vw 0vw;
+    text-align: center;
+    margin:0px 1vw;
+    background-color: white;
+}
+.sectionBox{
+    width: 100%;
+    background-color: white;
+    height: 10vw;
+    margin-top:2vw;
+}
+.w30p{
+    width: 30%;
+}
+.lineBox>div{
+    width: 30%;
+}
+.sectionBox1{
+    width: 100%;
+    background-color: white;
+    height: 22vw;
+    margin-top:2vw;
+}
+.l1 .sectionBox{
+    margin-top:0vw;
+}
+.tableBox{
+    width: 16vw;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 0.5vw;
+    color: black;
+    font-size: 1vw;
+}
+.stage{
+    color: black;
+    font-size: 2vw;
+}
